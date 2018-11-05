@@ -5,7 +5,7 @@ buffer = ws2812.newBuffer(24,3)
 ws2812_effects.init(buffer)
 ws2812_effects.set_speed(10)
 ws2812_effects.set_brightness(10)
-ws2812_effects.set_color(0,0,255)
+ws2812_effects.set_color(0,255,0)
 if demo == 1 then
     ws2812_effects.set_mode("blink")
     
@@ -24,3 +24,4 @@ elseif demo == 5 then
 
 end
 ws2812_effects.start()
+-- at exit must call either ws2812_effects.stop() or node.restart()
