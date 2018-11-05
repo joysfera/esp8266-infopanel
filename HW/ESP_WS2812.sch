@@ -1,0 +1,357 @@
+EESchema Schematic File Version 4
+LIBS:ESP_WS2812-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "WiFi LED information panel"
+Date "2018-10-31"
+Rev ""
+Comp "www.pstehlik.cz"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ESP_WS2812-rescue:ESP8266-07 U1
+U 1 1 553AAF87
+P 5950 3400
+F 0 "U1" H 5950 3400 60  0000 C CNN
+F 1 "ESP8266-07" V 5950 3400 60  0000 C CNN
+F 2 "lib:ESP-8266-07" H 5950 3400 60  0001 C CNN
+F 3 "" H 5950 3400 60  0000 C CNN
+	1    5950 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 553BF77A
+P 5600 4850
+F 0 "#PWR01" H 5600 4600 60  0001 C CNN
+F 1 "GND" H 5600 4700 60  0000 C CNN
+F 2 "" H 5600 4850 60  0000 C CNN
+F 3 "" H 5600 4850 60  0000 C CNN
+	1    5600 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L ESP_WS2812-rescue:SW_PUSH SW1
+U 1 1 567D4755
+P 7650 4150
+F 0 "SW1" H 7800 4260 50  0000 C CNN
+F 1 "User" H 7650 4070 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_TL3305A" H 7650 4150 50  0001 C CNN
+F 3 "" H 7650 4150 50  0000 C CNN
+	1    7650 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L ESP_WS2812-rescue:R R3
+U 1 1 567D56AF
+P 7650 4600
+F 0 "R3" V 7730 4600 50  0000 C CNN
+F 1 "330" V 7650 4600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7580 4600 50  0001 C CNN
+F 3 "" H 7650 4600 50  0000 C CNN
+	1    7650 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L ESP_WS2812-rescue:R R2
+U 1 1 567DDE97
+P 6800 4050
+F 0 "R2" V 6880 4050 50  0000 C CNN
+F 1 "10k" V 6800 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6730 4050 50  0001 C CNN
+F 3 "" H 6800 4050 50  0000 C CNN
+	1    6800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L ESP_WS2812-rescue:R R4
+U 1 1 567FF3DD
+P 7650 3100
+F 0 "R4" V 7730 3100 50  0000 C CNN
+F 1 "10k" V 7650 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7580 3100 50  0001 C CNN
+F 3 "" H 7650 3100 50  0000 C CNN
+	1    7650 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 4750 1900
+Wire Wire Line
+	3450 4800 4750 4800
+Wire Wire Line
+	5600 4850 5600 4800
+Connection ~ 5600 4800
+Wire Wire Line
+	6800 4200 6800 4800
+Connection ~ 6800 4800
+Wire Wire Line
+	6650 4000 6650 4800
+Connection ~ 6650 4800
+Wire Wire Line
+	6650 3800 6800 3800
+Wire Wire Line
+	7650 4800 7650 4750
+Connection ~ 7650 4800
+Wire Wire Line
+	7650 3250 7650 3400
+Wire Wire Line
+	6650 3400 7650 3400
+Wire Wire Line
+	6800 3800 6800 3900
+Wire Wire Line
+	2950 1200 3450 1200
+Wire Wire Line
+	3450 1200 3450 1900
+Wire Wire Line
+	4750 1900 4750 3000
+Wire Wire Line
+	4150 1900 4750 1900
+$Comp
+L ESP_WS2812-rescue:C-RESCUE-ESP_WS2812 C5
+U 1 1 57541D3E
+P 3450 2150
+F 0 "C5" H 3500 2250 50  0000 L CNN
+F 1 "10µF" H 3500 2050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3488 2000 30  0001 C CNN
+F 3 "" H 3450 2150 60  0000 C CNN
+	1    3450 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L ht7333:HT7333 U2
+U 1 1 579910CF
+P 3850 1900
+F 0 "U2" H 3950 1650 50  0000 C CNN
+F 1 "HT7335" H 3850 2150 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT89-3_Housing" H 3850 1900 50  0001 C CNN
+F 3 "" H 3850 1900 50  0000 C CNN
+	1    3850 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 1900 7650 2950
+Connection ~ 7650 3400
+NoConn ~ 5100 2600
+NoConn ~ 5100 2800
+NoConn ~ 5100 3200
+NoConn ~ 5100 3600
+Connection ~ 3450 1200
+Connection ~ 3450 1900
+Wire Wire Line
+	7500 3600 7500 2700
+Wire Wire Line
+	7850 4800 7850 2900
+Wire Wire Line
+	2650 2950 3450 2950
+Connection ~ 3450 2950
+Wire Wire Line
+	2650 1800 2650 1900
+NoConn ~ 2950 1400
+NoConn ~ 2950 1500
+NoConn ~ 2950 1600
+$Comp
+L ESP_WS2812-rescue:LED D2
+U 1 1 5AE386A1
+P 7200 4100
+F 0 "D2" H 7200 4200 50  0000 C CNN
+F 1 "LED" H 7200 4000 50  0000 C CNN
+F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7200 4100 50  0001 C CNN
+F 3 "" H 7200 4100 50  0001 C CNN
+	1    7200 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7200 4250 7200 4800
+Connection ~ 7200 4800
+$Comp
+L ESP_WS2812-rescue:R R1
+U 1 1 5AE387D4
+P 6900 3000
+F 0 "R1" V 6980 3000 50  0000 C CNN
+F 1 "330" V 6900 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 3000 50  0001 C CNN
+F 3 "" H 6900 3000 50  0001 C CNN
+	1    6900 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7050 3000 7200 3000
+Wire Wire Line
+	7200 3000 7200 3950
+$Comp
+L ESP_WS2812-rescue:R R5
+U 1 1 5AE38DF5
+P 6900 3600
+F 0 "R5" V 6980 3600 50  0000 C CNN
+F 1 "330" V 6900 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 3600 50  0001 C CNN
+F 3 "" H 6900 3600 50  0001 C CNN
+	1    6900 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 3600 6750 3600
+Wire Wire Line
+	7050 3600 7500 3600
+Wire Wire Line
+	6650 3000 6750 3000
+NoConn ~ 6650 3200
+Wire Wire Line
+	4750 4200 4750 4000
+Connection ~ 4750 4000
+Wire Wire Line
+	4750 4600 4750 4800
+Connection ~ 4750 4800
+Wire Wire Line
+	5600 4800 6650 4800
+Wire Wire Line
+	6800 4800 7200 4800
+Wire Wire Line
+	6650 4800 6800 4800
+Wire Wire Line
+	7650 4800 7850 4800
+Wire Wire Line
+	7650 3400 7650 3850
+Wire Wire Line
+	3450 1900 3450 1950
+Wire Wire Line
+	3450 1900 3550 1900
+Wire Wire Line
+	3450 2950 3850 2950
+Wire Wire Line
+	3450 2950 3450 4800
+Wire Wire Line
+	7200 4800 7650 4800
+Wire Wire Line
+	4750 4000 5100 4000
+Wire Wire Line
+	4750 4800 5600 4800
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5B5F93A8
+P 2650 1400
+F 0 "J1" H 2705 1867 50  0000 C CNN
+F 1 "USB_B_Micro" H 2705 1776 50  0000 C CNN
+F 2 "libKonektory:USB_Micro-B_Wuerth_629105150521" H 2800 1350 50  0001 C CNN
+F 3 "~" H 2800 1350 50  0001 C CNN
+	1    2650 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1800 2550 1900
+Wire Wire Line
+	2550 1900 2650 1900
+Connection ~ 2650 1900
+Wire Wire Line
+	2650 1900 2650 2950
+Wire Wire Line
+	7500 2700 8300 2700
+$Comp
+L ESP_WS2812-rescue:R R6
+U 1 1 5B6050AF
+P 6900 2600
+F 0 "R6" V 6980 2600 50  0000 C CNN
+F 1 "330" V 6900 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6830 2600 50  0001 C CNN
+F 3 "" H 6900 2600 50  0001 C CNN
+	1    6900 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 2600 6750 2600
+Wire Wire Line
+	7850 2900 8300 2900
+Wire Wire Line
+	7850 1200 7850 2800
+Wire Wire Line
+	7850 2800 8300 2800
+Wire Wire Line
+	3450 1200 7850 1200
+Wire Wire Line
+	7050 2600 8300 2600
+$Comp
+L Connector:Conn_01x01_Female J3
+U 1 1 5B618711
+P 6900 2800
+F 0 "J3" H 6927 2826 50  0000 L CNN
+F 1 "RX" H 6927 2735 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 6900 2800 50  0001 C CNN
+F 3 "~" H 6900 2800 50  0001 C CNN
+	1    6900 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2800 6700 2800
+Wire Wire Line
+	3450 2350 3450 2950
+$Comp
+L ESP_WS2812-rescue:C-RESCUE-ESP_WS2812 C1
+U 1 1 5B649E3A
+P 4750 4400
+F 0 "C1" H 4800 4500 50  0000 L CNN
+F 1 "10µF" H 4800 4300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4788 4250 30  0001 C CNN
+F 3 "" H 4750 4400 60  0000 C CNN
+	1    4750 4400
+	1    0    0    -1  
+$EndComp
+Text Label 8150 2900 0    50   ~ 0
+GND
+Text Label 8150 2800 0    50   ~ 0
+VCC
+Text Label 8150 2700 0    50   ~ 0
+TX2
+Text Label 8150 2600 0    50   ~ 0
+TX1
+Wire Wire Line
+	8300 3000 8150 3000
+Wire Wire Line
+	8300 3100 8150 3100
+Text Label 8150 3000 0    50   ~ 0
+DIN
+Text Label 8150 3200 0    50   ~ 0
+CLK
+Wire Wire Line
+	5100 3400 4900 3400
+Wire Wire Line
+	5100 3800 4900 3800
+Text Label 4900 3400 0    50   ~ 0
+CLK
+Text Label 4900 3800 0    50   ~ 0
+DIN
+Wire Wire Line
+	4750 1900 7650 1900
+Wire Wire Line
+	4750 3000 5100 3000
+Connection ~ 4750 3000
+Wire Wire Line
+	4750 3000 4750 4000
+$Comp
+L Connector:Conn_01x07_Male J2
+U 1 1 5B67B50E
+P 8500 2900
+F 0 "J2" H 8473 2830 50  0000 R CNN
+F 1 "Display" H 8473 2921 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 8500 2900 50  0001 C CNN
+F 3 "~" H 8500 2900 50  0001 C CNN
+	1    8500 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8300 3200 8150 3200
+Text Label 8150 3100 0    50   ~ 0
+CS
+Text Label 6700 3800 0    50   ~ 0
+CS
+Text Notes 4400 1900 0    50   ~ 0
+3.5 V
+Text Notes 3050 1200 0    50   ~ 0
+5.0 V
+Wire Wire Line
+	3850 2200 3850 2950
+$EndSCHEMATC
